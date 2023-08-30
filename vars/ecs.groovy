@@ -4,7 +4,7 @@ def dockerBuildAndPush(){
             // def customImage = docker.build("node-app:${env.BUILD_ID}")
             // customImage.push()  
 
-            withDockerRegistry(credentialsId: 'ecr:us-east-1:aws', url: 'https;//707072725274.dkr.ecr.us-east-1.amazonaws.com') {
+            withDockerRegistry(credentialsId: 'ecr:us-east-1:aws', url: 'https://707072725274.dkr.ecr.us-east-1.amazonaws.com') {
               def customImage = docker.build("node-app:${env.BUILD_ID}")
               customImage.push()
        }
